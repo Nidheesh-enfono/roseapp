@@ -5,8 +5,15 @@ import styles from "../styles/Home.module.css";
 import { Card, Row, Col, Form, Button } from "react-bootstrap";
 
 export default function Home() {
+  //Get current date
+  const today = new Date();
+  const tomorrow = new Date(today);
+  const dayAfter = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  dayAfter.setDate(dayAfter.getDate() + 2);
+
   const [standard, setStandard] = useState("1");
-  const [day, setDay] = useState("TODAY");
+  const [day, setDay] = useState(today.toISOString().split("T")[0]);
   const [time, setTime] = useState("3:00 PM");
   const [mobile, setMobile] = useState("");
 
@@ -28,15 +35,18 @@ export default function Home() {
   const days = [
     {
       id: 1,
-      label: "TODAY",
+      label: `TODAY ${today.toISOString().split("T")[0]}`,
+      value: today.toISOString().split("T")[0],
     },
     {
       id: 2,
-      label: "TOMORROW",
+      label: `TOMORROW ${tomorrow.toISOString().split("T")[0]}`,
+      value: tomorrow.toISOString().split("T")[0],
     },
     {
       id: 3,
-      label: "DAY AFTER",
+      label: `DAY AFTER ${dayAfter.toISOString().split("T")[0]}`,
+      value: dayAfter.toISOString().split("T")[0],
     },
   ];
 
@@ -169,11 +179,11 @@ export default function Home() {
               {days?.map((item, idx) => (
                 <Col
                   key={idx}
-                  onClick={() => setDay(item.label)}
+                  onClick={() => setDay(item.value)}
                   className="p-2 py-3 rounded-2"
                   style={{
                     cursor: "pointer",
-                    backgroundColor: day === item.label ? "#F56EB3" : "white",
+                    backgroundColor: day === item.value ? "#F56EB3" : "white",
                   }}
                 >
                   {item.label}
@@ -182,12 +192,13 @@ export default function Home() {
             </Row>
             <Row className="mt-4 d-flex justify-content-center">
               <Col xs={6}>
+                <h5>OR</h5>
                 <Form.Control
                   style={{ border: "1px solid ##F56EB3" }}
                   type="date"
                   name="date"
                   placeholder="Enter Phone Number with country code"
-                  value={day}
+                  value={today.toISOString().split("T")[0]}
                   onChange={(e) => setDay(e.target.value)}
                 />
               </Col>
