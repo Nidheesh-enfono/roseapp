@@ -192,7 +192,7 @@ export default function Home() {
                 />
               </Col>
             </Row>
-            <Button onClick={handleBooking} className="my-4">
+            <Button onClick={handleBooking} style={{background:'#F56EB3',width:'75%'}} className="my-4">
               Book Now
             </Button>
           </Card.Body>
