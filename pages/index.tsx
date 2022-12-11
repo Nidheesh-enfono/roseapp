@@ -81,12 +81,6 @@ export default function Home() {
 
   const handleBooking = (e: any) => {
     e.preventDefault();
-    let payload = {
-      standard,
-      day,
-      time,
-      mobile,
-    };
 
     if (mobile === "") {
       alert("Please enter your mobile number");
@@ -122,7 +116,7 @@ export default function Home() {
                 <Col
                   key={idx}
                   xs={2}
-                  className="p-3"
+                  className="p-3 m-1 rounded-2"
                   style={{
                     border: "1px solid #F56EB3",
                     cursor: "pointer",
@@ -134,14 +128,8 @@ export default function Home() {
                 </Col>
               ))}
             </Row>
-            <Row>
-              <Col></Col>
-              <Col className="p-3" style={{ border: "1px solid #F56EB3" }}>
-                Grown-up
-              </Col>
-              <Col></Col>
-            </Row>
             <h5 className="mt-4">Select Date for Free Demo</h5>
+            <hr className="my-3" />
             <Row className="mt-4">
               {days?.map((item, idx) => (
                 <Col
@@ -179,7 +167,8 @@ export default function Home() {
               ))}
             </Row>
 
-            <h5 className="mt-5">Please Enter your mobile</h5>
+            <h5 className="mt-3">Please Enter your mobile</h5>
+            <hr className="my-3" />
             <Row className="mt-3">
               <Col className="">
                 <Form.Control
