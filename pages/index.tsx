@@ -101,7 +101,7 @@ export default function Home() {
         </div>
         <Card>
           <Card.Body className="text-center">
-            <h3 className="mt-4" style={{ fontWeight: "600" }}>
+            <h3 className="mt-2" style={{ fontWeight: "600" }}>
               DEMO BOOKING
             </h3>
             <hr />
