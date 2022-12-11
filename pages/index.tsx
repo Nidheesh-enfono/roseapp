@@ -124,6 +124,7 @@ export default function Home() {
                   border: "1px solid #F56EB3",
                   cursor: "pointer",
                   backgroundColor: standard === "LKG" ? "#F56EB3" : "white",
+                  color: standard === "LKG" ? "white" : "black",
                 }}
                 onClick={() => setStandard("LKG")}
               >
@@ -136,6 +137,7 @@ export default function Home() {
                   border: "1px solid #F56EB3",
                   cursor: "pointer",
                   backgroundColor: standard === "UKG" ? "#F56EB3" : "white",
+                  color: standard === "UKG" ? "white" : "black",
                 }}
                 onClick={() => setStandard("UKG")}
               >
@@ -152,6 +154,7 @@ export default function Home() {
                     border: "1px solid #F56EB3",
                     cursor: "pointer",
                     backgroundColor: standard === item.id ? "#F56EB3" : "white",
+                    color: standard === item.id ? "white" : "black",
                   }}
                   onClick={() => setStandard(item.id)}
                 >
@@ -167,6 +170,7 @@ export default function Home() {
                   border: "1px solid #F56EB3",
                   cursor: "pointer",
                   backgroundColor: standard === "Adult" ? "#F56EB3" : "white",
+                  color: standard === "Adult" ? "white" : "black",
                 }}
                 onClick={() => setStandard("Adult")}
               >
@@ -184,6 +188,7 @@ export default function Home() {
                   style={{
                     cursor: "pointer",
                     backgroundColor: day === item.value ? "#F56EB3" : "white",
+                    color: day === item.value ? "white" : "black",
                   }}
                 >
                   {item.label}
@@ -198,7 +203,6 @@ export default function Home() {
                   type="date"
                   name="date"
                   placeholder="Enter Phone Number with country code"
-                  value={today.toISOString().split("T")[0]}
                   onChange={(e) => setDay(e.target.value)}
                 />
               </Col>
