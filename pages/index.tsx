@@ -112,7 +112,7 @@ export default function Home() {
         <Card>
           <Card.Body className="text-center">
             <h3 className="mt-2" style={{ fontWeight: "600" }}>
-              DEMO BOOKING
+            Book for Free Demo Class and Counseling
             </h3>
             <hr />
             <h5>Select Your Child&apos;s Grade in School</h5>
@@ -202,6 +202,7 @@ export default function Home() {
                   style={{ border: "1px solid ##F56EB3" }}
                   type="date"
                   name="date"
+                  value={day}
                   placeholder="Enter Phone Number with country code"
                   onChange={(e) => setDay(e.target.value)}
                 />
