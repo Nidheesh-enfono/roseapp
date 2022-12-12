@@ -23,3 +23,16 @@ a {
     background: black;
   }
 }
+/* large screen */
+@media (min-width: 1024px) {
+ .custom-body {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  
+ }
+
+}

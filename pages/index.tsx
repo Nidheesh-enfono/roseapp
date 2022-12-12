@@ -102,7 +102,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="custom-body">
         <div className="d-flex justify-content-center align-items-center py-3">
           <img
             src="https://uae.roseapp.in/wp-content/uploads/2022/02/rose-150x38.png"
@@ -169,10 +169,10 @@ export default function Home() {
                 style={{
                   border: "1px solid #F35D94",
                   cursor: "pointer",
-                  backgroundColor: standard === "Adult" ? "#F35D94" : "white",
-                  color: standard === "Adult" ? "white" : "black",
+                  backgroundColor: standard === "Grown-up" ? "#F35D94" : "white",
+                  color: standard === "Grown-up" ? "white" : "black",
                 }}
-                onClick={() => setStandard("Adult")}
+                onClick={() => setStandard("Grown-up")}
               >
                 Grown Up
               </Col>
@@ -199,7 +199,7 @@ export default function Home() {
               <Col xs={6}>
                 <h5>OR</h5>
                 <Form.Control
-                  style={{ border: "1px solid ##F35D94" }}
+                  style={{ border: "1px solid #b3c3f3" }}
                   type="date"
                   name="date"
                   value={day}
@@ -237,7 +237,7 @@ export default function Home() {
             <Row className="mt-3">
               <Col className="">
                 <Form.Control
-                  style={{ border: "1px solid ##F35D94" }}
+                  style={{ border: "1px solid #b3c3f3" }}
                   type="text"
                   name="Mobile"
                   placeholder="Enter Phone Number with country code"
