@@ -88,7 +88,7 @@ export default function Home() {
       alert("Please enter your mobile number");
       return;
     } else {
-      window.location.href = `https://wa.me/918129855572?text=Hi, I would like to book a free demo for my child in ${standard} grade on ${day} at ${time}. My mobile number is ${mobile}`;
+      window.location.href = `https://wa.me/917006691010?text=Hi, I would like to book a free demo for my child in ${standard} grade on ${day} at ${time}. My mobile number is ${mobile}`;
     }
   };
 
@@ -104,6 +104,7 @@ export default function Home() {
       </Head>
       <main className="custom-body">
         <div className="d-flex justify-content-center align-items-center py-3">
+          {/*eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://uae.roseapp.in/wp-content/uploads/2022/02/rose-150x38.png"
             alt=""
