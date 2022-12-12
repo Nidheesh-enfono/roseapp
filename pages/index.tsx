@@ -35,17 +35,17 @@ export default function Home() {
   const days = [
     {
       id: 1,
-      label: `TODAY ${today.toISOString().split("T")[0]}`,
+      label: `TODAY`,
       value: today.toISOString().split("T")[0],
     },
     {
       id: 2,
-      label: `TOMORROW ${tomorrow.toISOString().split("T")[0]}`,
+      label: `TOMORROW`,
       value: tomorrow.toISOString().split("T")[0],
     },
     {
       id: 3,
-      label: `DAY AFTER ${dayAfter.toISOString().split("T")[0]}`,
+      label: `DAY AFTER`,
       value: dayAfter.toISOString().split("T")[0],
     },
   ];
@@ -121,9 +121,9 @@ export default function Home() {
                 xs={3}
                 className="p-2 m-1 rounded-2"
                 style={{
-                  border: "1px solid #F56EB3",
+                  border: "1px solid #F35D94",
                   cursor: "pointer",
-                  backgroundColor: standard === "LKG" ? "#F56EB3" : "white",
+                  backgroundColor: standard === "LKG" ? "#F35D94" : "white",
                   color: standard === "LKG" ? "white" : "black",
                 }}
                 onClick={() => setStandard("LKG")}
@@ -134,9 +134,9 @@ export default function Home() {
                 xs={3}
                 className="p-2 m-1 rounded-2"
                 style={{
-                  border: "1px solid #F56EB3",
+                  border: "1px solid #F35D94",
                   cursor: "pointer",
-                  backgroundColor: standard === "UKG" ? "#F56EB3" : "white",
+                  backgroundColor: standard === "UKG" ? "#F35D94" : "white",
                   color: standard === "UKG" ? "white" : "black",
                 }}
                 onClick={() => setStandard("UKG")}
@@ -151,9 +151,9 @@ export default function Home() {
                   xs={2}
                   className="p-2 m-1 rounded-2"
                   style={{
-                    border: "1px solid #F56EB3",
+                    border: "1px solid #F35D94",
                     cursor: "pointer",
-                    backgroundColor: standard === item.id ? "#F56EB3" : "white",
+                    backgroundColor: standard === item.id ? "#F35D94" : "white",
                     color: standard === item.id ? "white" : "black",
                   }}
                   onClick={() => setStandard(item.id)}
@@ -167,9 +167,9 @@ export default function Home() {
                 xs={4}
                 className="p-2 m-1 rounded-2"
                 style={{
-                  border: "1px solid #F56EB3",
+                  border: "1px solid #F35D94",
                   cursor: "pointer",
-                  backgroundColor: standard === "Adult" ? "#F56EB3" : "white",
+                  backgroundColor: standard === "Adult" ? "#F35D94" : "white",
                   color: standard === "Adult" ? "white" : "black",
                 }}
                 onClick={() => setStandard("Adult")}
@@ -187,7 +187,7 @@ export default function Home() {
                   className="p-2 py-3 rounded-2"
                   style={{
                     cursor: "pointer",
-                    backgroundColor: day === item.value ? "#F56EB3" : "white",
+                    backgroundColor: day === item.value ? "#F35D94" : "white",
                     color: day === item.value ? "white" : "black",
                   }}
                 >
@@ -199,7 +199,7 @@ export default function Home() {
               <Col xs={6}>
                 <h5>OR</h5>
                 <Form.Control
-                  style={{ border: "1px solid ##F56EB3" }}
+                  style={{ border: "1px solid ##F35D94" }}
                   type="date"
                   name="date"
                   value={day}
@@ -218,9 +218,10 @@ export default function Home() {
                   xs={2}
                   className="p-1 mx-1 mb-2 rounded-2"
                   style={{
-                    border: "1px solid #F56EB3",
+                    border: "1px solid #F35D94",
                     cursor: "pointer",
-                    backgroundColor: time === item.label ? "#F56EB3" : "white",
+                    backgroundColor: time === item.label ? "#F35D94" : "white",
+                    color: time === item.label ? "white" : "black",
                   }}
                   onClick={() => setTime(item.label)}
                 >
@@ -236,7 +237,7 @@ export default function Home() {
             <Row className="mt-3">
               <Col className="">
                 <Form.Control
-                  style={{ border: "1px solid ##F56EB3" }}
+                  style={{ border: "1px solid ##F35D94" }}
                   type="text"
                   name="Mobile"
                   placeholder="Enter Phone Number with country code"
@@ -247,7 +248,7 @@ export default function Home() {
             </Row>
             <Button
               onClick={handleBooking}
-              style={{ background: "#F56EB3", width: "100%" }}
+              style={{ background: "#F35D94", width: "100%" }}
               className="my-4"
             >
               Book Now
